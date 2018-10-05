@@ -4,16 +4,19 @@ import systemManager.Book;
 import systemManager.Librarian;
 import systemManager.Reader;
 
-public interface SQLOperation {
+public interface SQLOperations {
 	
-	public void addMasterLibrarian(int id, String password, String firstName, String lastName, String phone, String address);
+	public void checkDB();
+	
+	public void addMasterLibrarian(int id, String firstName, String lastName, int phone, String address);
 	public void deleteMasterLibrarian(int id);
-	public void addLibrarian(int id, String password, String firstName, String lastName, String phone, String address);
-	public void deleteLibrarian(int id);
+	public void addMinorLibrarian(int id, String firstName, String lastName, int phone, String address);
+	public void deleteMinorLibrarian(int id);
 	public Librarian viewInfoAboutLibrarian(int id);
-	public void editLibrarianInfo(int id, String password, String firstName, String lastName, String phone, String address);
+	public void editLibrarianInfo(int oldId, int newId, String firstName, String lastName, int phone, String address);
+	public void editIsMasterLibrarian(int id, Boolean isMaster);
 	
-	public void addNewReader(int id, String firstName, String lastName, String phone, String address);
+	public void addNewReader(int id, String firstName, String lastName, int phone, String address);
 	public void deleteReader(int id);
 	public Reader getReaderInfo(int id);
 	

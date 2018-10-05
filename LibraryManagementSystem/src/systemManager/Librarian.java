@@ -3,17 +3,15 @@ package systemManager;
 public class Librarian {
 
 	protected int id;
-	protected String password;
 	protected String firstName;
 	protected String lastName;
 	protected String phone;
 	protected String address;
 	
 	
-	public Librarian(int id, String password, String firstName, String lastName, String phone, String address) {
+	public Librarian(int id, String firstName, String lastName, String phone, String address) {
 		super();
 		this.id = id;
-		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phone = phone;
@@ -25,12 +23,6 @@ public class Librarian {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	public String getFirstName() {
 		return firstName;
